@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#031013" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <!-- Primary SEO meta -->
+    <title>Happy Tour | Curated Tours &amp; Unforgettable Travel Experiences</title>
+    <meta
+      name="description"
+      content="Plan your next adventure with Happy Tour. Handpicked destinations, expert local guides and flexible tour packages across 85+ countries — book your perfect journey today."
+    />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp...) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Happy Tour" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://www.happy-tour.example.com/" />
+    <meta
+      property="og:title"
+      content="Happy Tour | Curated Tours &amp; Unforgettable Travel Experiences"
+    />
+    <meta
+      property="og:description"
+      content="Handpicked destinations, expert local guides and flexible tour packages across 85+ countries. Discover your perfect journey with Happy Tour."
+    />
+    <meta
+      property="og:image"
+      content="https://www.happy-tour.example.com/assets/hero-poster.webp"
+    />
+    <meta
+      property="og:image:alt"
+      content="Aerial view of a tropical coastline with turquoise sea and white sand beach"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Happy Tour | Curated Tours &amp; Unforgettable Travel Experiences"
+    />
+    <meta
+      name="twitter:description"
+      content="Handpicked destinations, expert local guides and flexible tour packages across 85+ countries."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.happy-tour.example.com/assets/hero-poster.webp"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="icon"
+      href="assets/favicon-32x32.png"
+      type="image/png"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="assets/favicon-48x48.png"
+      type="image/png"
+      sizes="48x48"
+    />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Self-hosted fonts (preloaded for the critical rendering path) -->
+    <link
+      rel="preload"
+      href="assets/fonts/poppins-latin-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/raleway-latin-800-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/fonts/fonts.css" />
+
+    <!-- Vendor CSS (self-hosted) -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css" />
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured data for search engines -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Happy Tour",
+        "url": "https://www.happy-tour.example.com/",
+        "logo": "https://www.happy-tour.example.com/assets/logo.png",
+        "description": "Happy Tour designs handpicked tours and travel packages with expert local guides in more than 85 countries, from tropical beach escapes to high-altitude expeditions.",
+        "telephone": "+1-555-123-4567",
+        "email": "info@example.com",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "A108 Adam Street",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "postalCode": "535022",
+          "addressCountry": "US"
+        },
+        "openingHours": "Mo-Fr 09:00-18:00",
+        "areaServed": "Worldwide"
+      }
+    </script>
+  </head>
+
+  <body class="index-page">
+    <!-- Accessibility: skip to main content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- ============ Header ============ -->
+    <header id="header" class="header">
+      <div class="header-container">
+        <a class="logo" href="#hero" aria-label="Happy Tour — home">
+          <img
+            src="assets/logo.webp"
+            alt="Happy Tour"
+            class="sitelogo"
+            width="442"
+            height="317"
+          />
+        </a>
+
+        <nav class="navmenu" id="primary-nav" aria-label="Primary navigation">
+          <ul class="navmenu-list">
+            <li><a href="#hero" class="navlink">Home</a></li>
+            <li><a href="#about" class="navlink">About</a></li>
+            <li><a href="#destinations" class="navlink">Destinations</a></li>
+            <li><a href="#tours" class="navlink">Tours</a></li>
+            <li><a href="#testimonials" class="navlink">Testimonials</a></li>
+            <li><a href="#contact" class="navlink">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="#booking" class="btngetstarted d-none d-lg-inline-flex">
+          Book Now
+        </a>
+
+        <button
+          class="navtoggle d-lg-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobile-menu"
+          aria-controls="mobile-menu"
+          aria-label="Open navigation menu"
+        >
+          <span class="navtoggle-bar" aria-hidden="true"></span>
+          <span class="navtoggle-bar" aria-hidden="true"></span>
+          <span class="navtoggle-bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============ Mobile navigation (offcanvas) ============ -->
+    <div
+      class="offcanvas offcanvas-end mobile-menu"
+      tabindex="-1"
+      id="mobile-menu"
+      aria-labelledby="mobile-menu-title"
+    >
+      <div class="offcanvas-header">
+        <h2 class="offcanvas-title visually-hidden" id="mobile-menu-title">
+          Navigation menu
+        </h2>
+        <img
+          src="assets/logo.webp"
+          alt=""
+          class="sitelogo"
+          width="442"
+          height="317"
+        />
+        <button
+          type="button"
+          class="mobile-menu-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close navigation menu"
+        >
+          <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="mobile-menu-list">
+          <li><a href="#hero" class="mobile-link">Home</a></li>
+          <li><a href="#about" class="mobile-link">About</a></li>
+          <li><a href="#destinations" class="mobile-link">Destinations</a></li>
+          <li><a href="#tours" class="mobile-link">Tours</a></li>
+          <li><a href="#testimonials" class="mobile-link">Testimonials</a></li>
+          <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="#booking" class="btngetstarted btngetstarted--block">
+          Book Now
+        </a>
+        <div class="mobile-menu-contact">
+          <a href="tel:+15551234567">
+            <i class="bi bi-telephone" aria-hidden="true"></i>
+            +1 (555) 123-4567
+          </a>
+          <a href="mailto:info@example.com">
+            <i class="bi bi-envelope" aria-hidden="true"></i>
+            info@example.com
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main id="main">
+      <!-- ============ Hero ============ -->
+      <section id="hero" class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="assets/hero-poster.webp"
+            disablepictureinpicture
+          >
+            <source src="assets/heroVideo.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7" data-reveal="fade-right">
+              <div class="hero-text">
+                <h1 class="hero-title" id="hero-title">
+                  Discover Your Perfect Journey
+                </h1>
+                <p class="hero-subtitle">
+                  Handpicked tours, expert local guides and unforgettable
+                  experiences in more than 85 countries &mdash; crafted around
+                  your style, your pace and your budget.
+                </p>
+                <div class="hero-buttons">
+                  <a href="#tours" class="btn btn--brand">Start Exploring</a>
+                  <a href="#destinations" class="btn btn--glass">
+                    Browse Tours
+                  </a>
+                </div>
+                <ul class="hero-trust">
+                  <li>
+                    <i class="bi bi-star-fill" aria-hidden="true"></i>
+                    4.9/5 average traveller rating
+                  </li>
+                  <li>
+                    <i class="bi bi-shield-check" aria-hidden="true"></i>
+                    Free cancellation on every package
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Booking form -->
+            <div class="col-lg-5" id="booking" data-reveal="fade-left">
+              <div class="booking-form-wrapper">
+                <h2 class="form-title">Plan Your Adventure</h2>
+                <form class="booking-form" action="#" method="post" data-form="booking">
+                  <div class="form-group">
+                    <label for="destination">Destination</label>
+                    <select
+                      name="destination"
+                      id="destination"
+                      class="form-control"
+                      required
+                    >
+                      <option value="">Choose your destination</option>
+                      <option value="Europe">Europe</option>
+                      <option value="Asia">Asia</option>
+                      <option value="America">America</option>
+                      <option value="Africa">Africa</option>
+                      <option value="Oceania">Oceania</option>
+                    </select>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="checkin">Departure Date</label>
+                      <input
+                        type="date"
+                        name="checkin"
+                        id="checkin"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="checkout">Return Date</label>
+                      <input
+                        type="date"
+                        name="checkout"
+                        id="checkout"
+                        class="form-control"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="adults">Adults</label>
+                      <select
+                        name="adults"
+                        id="adults"
+                        class="form-control"
+                        required
+                      >
+                        <option value="1">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="3">3 Adults</option>
+                        <option value="4">4+ Adults</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="children">Children</label>
+                      <select
+                        name="children"
+                        id="children"
+                        class="form-control"
+                      >
+                        <option value="0">No Children</option>
+                        <option value="1">1 Child</option>
+                        <option value="2">2 Children</option>
+                        <option value="3">3+ Children</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="tour-type">Tour Type</label>
+                    <select
+                      name="tour_type"
+                      id="tour-type"
+                      class="form-control"
+                      required
+                    >
+                      <option value="">Select tour type</option>
+                      <option value="Adventure">Adventure</option>
+                      <option value="Cultural">Cultural</option>
+                      <option value="Relaxation">Relaxation</option>
+                      <option value="Family">Family</option>
+                      <option value="Luxury">Luxury</option>
+                    </select>
+                  </div>
+
+                  <button type="submit" class="btn btn--brand btn--block">
+                    Find Your Perfect Trip
+                  </button>
+                  <p class="form-status" role="status" aria-live="polite"></p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ About ============ -->
+      <section id="about" class="section about-section" aria-labelledby="about-title">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-6" data-reveal="fade-right">
+              <p class="section-badge">About Happy Tour</p>
+              <h2 class="section-title" id="about-title">
+                Explore the World with Confidence
+              </h2>
+              <p class="about-text">
+                For more than fifteen years we have turned bucket-list ideas into
+                seamless journeys. Every itinerary is designed by people who have
+                walked the trails, sailed the coastlines and eaten in the little
+                restaurants the guidebooks miss.
+              </p>
+              <p class="about-text">
+                From your first enquiry to your flight home, one dedicated travel
+                expert looks after the details &mdash; so all you have to think
+                about is what to pack.
+              </p>
+              <div class="stats">
+                <div class="stat">
+                  <span class="stat-num">
+                    <span class="counter" data-count="1200">1,200</span>+
+                  </span>
+                  <p class="stat-label">Happy Travelers</p>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">
+                    <span class="counter" data-count="85">85</span>
+                  </span>
+                  <p class="stat-label">Countries Covered</p>
+                </div>
+                <div class="stat">
+                  <span class="stat-num">
+                    <span class="counter" data-count="15">15</span>
+                  </span>
+                  <p class="stat-label">Years Experience</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6" data-reveal="fade-left">
+              <div class="about-visual">
+                <div class="image-container">
+                  <img
+                    src="assets/showcase-8.webp"
+                    alt="Hot air balloons rising over a valley with travellers watching at sunrise"
+                    class="img-fluid"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="excellence-badge">
+                  <span class="numbers">15+</span>
+                  <p>Years of Excellence</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Why Choose Us ============ -->
+      <section
+        id="why-choose"
+        class="section why-section"
+        aria-labelledby="why-title"
+      >
+        <div class="container">
+          <header class="section-header text-center" data-reveal="fade-up">
+            <p class="section-badge">Why Choose Us</p>
+            <h2 class="section-title" id="why-title">
+              Why Choose Us for Your Next Adventure
+            </h2>
+            <p class="section-lead">
+              Everything you need for a flawless trip &mdash; planned by people
+              who care where you go and how you get there.
+            </p>
+          </header>
+
+          <div class="row g-4 cards">
+            <div class="col-12 col-md-6 col-lg-4 d-flex" data-reveal="fade-up" data-reveal-delay="0">
+              <article class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-people-fill" aria-hidden="true"></i>
+                </div>
+                <h3 class="info-card-title">Local Experts</h3>
+                <p class="info-card-text">
+                  On-the-ground partners in every destination who open doors you
+                  did not know existed and share the stories behind the sights.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex" data-reveal="fade-up" data-reveal-delay="100">
+              <article class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-shield-check" aria-hidden="true"></i>
+                </div>
+                <h3 class="info-card-title">Safe &amp; Secure</h3>
+                <p class="info-card-text">
+                  Vetted accommodation, insured operators and 24/7 assistance, so
+                  you can explore boldly knowing help is always one call away.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex" data-reveal="fade-up" data-reveal-delay="200">
+              <article class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-cash-stack" aria-hidden="true"></i>
+                </div>
+                <h3 class="info-card-title">Best Prices</h3>
+                <p class="info-card-text">
+                  Transparent pricing with no hidden extras and a price-match
+                  promise on every published package.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex" data-reveal="fade-up" data-reveal-delay="300">
+              <article class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-headset" aria-hidden="true"></i>
+                </div>
+                <h3 class="info-card-title">24/7 Support</h3>
+                <p class="info-card-text">
+                  Real people on the phone and on chat at any hour, in any time
+                  zone, before you book and while you travel.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex" data-reveal="fade-up" data-reveal-delay="400">
+              <article class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                </div>
+                <h3 class="info-card-title">Global Destinations</h3>
+                <p class="info-card-text">
+                  More than 500 handpicked locations across six continents, from
+                  quiet island escapes to the world's great cities.
+                </p>
+              </article>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 d-flex" data-reveal="fade-up" data-reveal-delay="500">
+              <article class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+                <h3 class="info-card-title">Premium Experience</h3>
+                <p class="info-card-text">
+                  Small groups, boutique stays and hand-tuned itineraries that
+                  make every day of your holiday feel special.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Featured Destinations ============ -->
+      <section
+        id="destinations"
+        class="section destinations-section"
+        aria-labelledby="destinations-title"
+      >
+        <div class="container">
+          <header class="section-header text-center" data-reveal="fade-up">
+            <p class="section-badge">Featured Destinations</p>
+            <h2 class="section-title" id="destinations-title">
+              Check Our <span class="highlight-title">Featured Destinations</span>
+            </h2>
+          </header>
+
+          <div class="row g-4">
+            <!-- Large destination card -->
+            <div class="col-lg-6" data-reveal="fade-right">
+              <article class="dest-card-lg">
+                <img
+                  src="assets/destination-3.webp"
+                  alt="Scenic tropical village with white buildings on a hillside under a purple sunset sky"
+                  class="dest-card-lg-bg"
+                  width="1024"
+                  height="683"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="dest-card-lg-content">
+                  <span class="card-badge">Popular Choice</span>
+                  <h3 class="dest-card-title">Tropical Paradise</h3>
+                  <p class="location">
+                    <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+                    Maldives
+                  </p>
+                  <p class="desc">
+                    Pristine beaches, crystal-clear lagoons and luxury overwater
+                    villas await in this tropical paradise.
+                  </p>
+                  <div class="card-meta">
+                    <span><i class="bi bi-collection" aria-hidden="true"></i> 22 Packages</span>
+                    <span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9 (412)</span>
+                  </div>
+                  <p class="price-info">
+                    <span class="starting-from">Starting from</span>
+                    <span class="amount">$2,150</span>
+                  </p>
+                  <a href="#tours" class="btn btn--glass btn--sm">
+                    Explore Now <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <!-- Small destination cards -->
+            <div class="col-lg-6">
+              <div class="dest-stack">
+                <article class="dest-card-sm" data-reveal="fade-left" data-reveal-delay="100">
+                  <div class="dest-card-sm-media">
+                    <img
+                      src="assets/destination-7.webp"
+                      alt="Historic building with ornate architecture under a clear blue sky"
+                      width="640"
+                      height="427"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="badge-top-right badge-best-value">Best Value</span>
+                  </div>
+                  <div class="dest-card-sm-body">
+                    <h3 class="dest-card-sm-title">Mountain Adventure</h3>
+                    <p class="location-small">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      Nepal
+                    </p>
+                    <p class="small-desc">
+                      Breathtaking Himalayan peaks and ancient Buddhist temples.
+                    </p>
+                    <div class="dest-card-sm-meta">
+                      <span><i class="bi bi-calendar-check" aria-hidden="true"></i> 16 Tours</span>
+                      <span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span>
+                      <span class="price-small">from $1,420</span>
+                    </div>
+                    <a href="#tours" class="details-link">
+                      View Details <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="dest-card-sm" data-reveal="fade-left" data-reveal-delay="200">
+                  <div class="dest-card-sm-media">
+                    <img
+                      src="assets/destination-11.webp"
+                      alt="Ancient ruins with large stone gates, blue sky and green landscape"
+                      width="640"
+                      height="427"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="dest-card-sm-body">
+                    <h3 class="dest-card-sm-title">Cultural Heritage</h3>
+                    <p class="location-small">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      Peru
+                    </p>
+                    <p class="small-desc">
+                      Discover ancient civilizations and colourful mountain
+                      markets.
+                    </p>
+                    <div class="dest-card-sm-meta">
+                      <span><i class="bi bi-calendar-check" aria-hidden="true"></i> 9 Expeditions</span>
+                      <span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span>
+                      <span class="price-small">from $980</span>
+                    </div>
+                    <a href="#tours" class="details-link">
+                      View Details <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </article>
+
+                <article class="dest-card-sm" data-reveal="fade-left" data-reveal-delay="300">
+                  <div class="dest-card-sm-media">
+                    <img
+                      src="assets/destination-16.webp"
+                      alt="African safari landscape with savannah and animals in golden hour light"
+                      width="640"
+                      height="427"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    <span class="badge-top-right badge-limited">Limited Spots</span>
+                  </div>
+                  <div class="dest-card-sm-body">
+                    <h3 class="dest-card-sm-title">Safari Experience</h3>
+                    <p class="location-small">
+                      <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                      Kenya
+                    </p>
+                    <p class="small-desc">
+                      Witness the Big Five and experience the great migration.
+                    </p>
+                    <div class="dest-card-sm-meta">
+                      <span><i class="bi bi-calendar-check" aria-hidden="true"></i> 11 Safaris</span>
+                      <span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span>
+                      <span class="price-small">from $2,750</span>
+                    </div>
+                    <a href="#tours" class="details-link">
+                      View Details <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Featured Tours ============ -->
+      <section id="tours" class="section tours-section" aria-labelledby="tours-title">
+        <div class="container">
+          <header class="section-header text-center" data-reveal="fade-up">
+            <p class="section-badge">Featured Tours</p>
+            <h2 class="section-title" id="tours-title">
+              Check Our <span class="highlight-title">Featured Tours</span>
+            </h2>
+          </header>
+
+          <div class="row g-4">
+            <!-- Tour 1 -->
+            <div class="col-md-6 col-lg-4" data-reveal="fade-up" data-reveal-delay="0">
+              <article class="tour-card">
+                <div class="tour-card-media">
+                  <img
+                    src="assets/tour-beach.webp"
+                    alt="Overwater villas above a turquoise lagoon on a sunny tropical island"
+                    width="760"
+                    height="507"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="badge-top-left badge-top-rated">Top Rated</span>
+                  <span class="price-tag">$2,150</span>
+                </div>
+                <div class="tour-card-body">
+                  <h3 class="tour-card-title">Serene Beach Retreat</h3>
+                  <div class="card-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> 8 Days</span>
+                    <span><i class="bi bi-people" aria-hidden="true"></i> Max 6</span>
+                  </div>
+                  <p class="description">
+                    Powder-white beaches and calm turquoise lagoons. Island-hop
+                    between boutique resorts with snorkelling, spa days and
+                    sunset cruises.
+                  </p>
+                  <div class="card-tags">
+                    <span>Maldives</span>
+                    <span>Seychelles</span>
+                    <span>Bora Bora</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#booking" class="btn btn--brand btn--sm">Book Now</a>
+                    <div class="ratings" title="Rated 4.8 out of 5 by 95 travellers">
+                      <span class="visually-hidden">Rated 4.8 out of 5 stars</span>
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      <span class="rating-value">4.8 (95)</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Tour 2 -->
+            <div class="col-md-6 col-lg-4" data-reveal="fade-up" data-reveal-delay="100">
+              <article class="tour-card">
+                <div class="tour-card-media">
+                  <img
+                    src="assets/tour-arctic.webp"
+                    alt="Kayakers paddling between icebergs with snowy mountains behind them"
+                    width="760"
+                    height="507"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="badge-top-left badge-only-spots">Only 3 Spots!</span>
+                  <span class="price-tag">$5,700</span>
+                </div>
+                <div class="tour-card-body">
+                  <h3 class="tour-card-title">Arctic Wilderness Expedition</h3>
+                  <div class="card-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> 10 Days</span>
+                    <span><i class="bi bi-people" aria-hidden="true"></i> Max 6</span>
+                  </div>
+                  <p class="description">
+                    Paddle between icebergs, hike volcanic terrain and chase the
+                    northern lights alongside expert polar guides.
+                  </p>
+                  <div class="card-tags">
+                    <span>Greenland</span>
+                    <span>Iceland</span>
+                    <span>Norway</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#booking" class="btn btn--brand btn--sm">Book Now</a>
+                    <div class="ratings" title="Rated 4.6 out of 5 by 125 travellers">
+                      <span class="visually-hidden">Rated 4.6 out of 5 stars</span>
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      <span class="rating-value">4.6 (125)</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Tour 3 -->
+            <div class="col-md-6 col-lg-4" data-reveal="fade-up" data-reveal-delay="200">
+              <article class="tour-card">
+                <div class="tour-card-media">
+                  <img
+                    src="assets/tour-4.webp"
+                    alt="Couple walking and photographing a desert landscape near an archway entrance"
+                    width="760"
+                    height="507"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="badge-top-left badge-newly-added">Newly Added</span>
+                  <span class="price-tag">$1,400</span>
+                </div>
+                <div class="tour-card-body">
+                  <h3 class="tour-card-title">Sahara Desert Discovery</h3>
+                  <div class="card-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> 5 Days</span>
+                    <span><i class="bi bi-people" aria-hidden="true"></i> Max 10</span>
+                  </div>
+                  <p class="description">
+                    Ride camels over golden dunes, sleep under a sky full of
+                    stars and share mint tea with Berber hosts.
+                  </p>
+                  <div class="card-tags">
+                    <span>Morocco</span>
+                    <span>Egypt</span>
+                    <span>Dubai</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#booking" class="btn btn--brand btn--sm">Book Now</a>
+                    <div class="ratings" title="Rated 4.9 out of 5 by 72 travellers">
+                      <span class="visually-hidden">Rated 4.9 out of 5 stars</span>
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      <span class="rating-value">4.9 (72)</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Tour 4 -->
+            <div class="col-md-6 col-lg-4" data-reveal="fade-up" data-reveal-delay="300">
+              <article class="tour-card">
+                <div class="tour-card-media">
+                  <img
+                    src="assets/tour-mediterranean.webp"
+                    alt="Colourful hillside village above a deep blue Mediterranean sea with boats in the bay"
+                    width="760"
+                    height="507"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="badge-top-left badge-popular-choice">Popular Choice</span>
+                  <span class="price-tag">$1,980</span>
+                </div>
+                <div class="tour-card-body">
+                  <h3 class="tour-card-title">Mediterranean Coastal Cruise</h3>
+                  <div class="card-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> 8 Days</span>
+                    <span><i class="bi bi-people" aria-hidden="true"></i> Max 15</span>
+                  </div>
+                  <p class="description">
+                    Sail from harbour to harbour along sun-drenched coasts, with
+                    long lunches, hidden coves and historic port towns.
+                  </p>
+                  <div class="card-tags">
+                    <span>France</span>
+                    <span>Croatia</span>
+                    <span>Italy</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#booking" class="btn btn--brand btn--sm">Book Now</a>
+                    <div class="ratings" title="Rated 4.7 out of 5 by 110 travellers">
+                      <span class="visually-hidden">Rated 4.7 out of 5 stars</span>
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      <span class="rating-value">4.7 (110)</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Tour 5 -->
+            <div class="col-md-6 col-lg-4" data-reveal="fade-up" data-reveal-delay="400">
+              <article class="tour-card">
+                <div class="tour-card-media">
+                  <img
+                    src="assets/tour-amazon.webp"
+                    alt="Hiker walking on a boardwalk trail through lush green rainforest"
+                    width="760"
+                    height="507"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="badge-top-left badge-eco-friendly">Eco-Friendly</span>
+                  <span class="price-tag">$2,650</span>
+                </div>
+                <div class="tour-card-body">
+                  <h3 class="tour-card-title">Amazon Rainforest Trek</h3>
+                  <div class="card-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> 12 Days</span>
+                    <span><i class="bi bi-people" aria-hidden="true"></i> Max 12</span>
+                  </div>
+                  <p class="description">
+                    Trek through the world's greatest rainforest with naturalist
+                    guides, canoe tributaries and stay in eco-lodges deep in the
+                    canopy.
+                  </p>
+                  <div class="card-tags">
+                    <span>Brazil</span>
+                    <span>Colombia</span>
+                    <span>Peru</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#booking" class="btn btn--brand btn--sm">Book Now</a>
+                    <div class="ratings" title="Rated 4.5 out of 5 by 98 travellers">
+                      <span class="visually-hidden">Rated 4.5 out of 5 stars</span>
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      <span class="rating-value">4.5 (98)</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Tour 6 -->
+            <div class="col-md-6 col-lg-4" data-reveal="fade-up" data-reveal-delay="500">
+              <article class="tour-card">
+                <div class="tour-card-media">
+                  <img
+                    src="assets/tour-patagonia.webp"
+                    alt="Two hikers with backpacks looking at jagged mountain peaks and a blue glacier"
+                    width="760"
+                    height="507"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="badge-top-left badge-adventure">Adventure Seekers</span>
+                  <span class="price-tag">$3,950</span>
+                </div>
+                <div class="tour-card-body">
+                  <h3 class="tour-card-title">Patagonian Peaks &amp; Glaciers</h3>
+                  <div class="card-meta">
+                    <span><i class="bi bi-clock" aria-hidden="true"></i> 14 Days</span>
+                    <span><i class="bi bi-people" aria-hidden="true"></i> Max 12</span>
+                  </div>
+                  <p class="description">
+                    Trek beneath granite towers, walk blue glacier ice and end
+                    each day with views that stop conversation.
+                  </p>
+                  <div class="card-tags">
+                    <span>Argentina</span>
+                    <span>Chile</span>
+                    <span>Bolivia</span>
+                  </div>
+                  <div class="card-actions">
+                    <a href="#booking" class="btn btn--brand btn--sm">Book Now</a>
+                    <div class="ratings" title="Rated 4.9 out of 5 by 62 travellers">
+                      <span class="visually-hidden">Rated 4.9 out of 5 stars</span>
+                      <span class="stars" aria-hidden="true">★★★★★</span>
+                      <span class="rating-value">4.9 (62)</span>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="text-center mt-5" data-reveal="fade-up">
+            <a href="#booking" class="btn btn--outline-brand btn-view-all">
+              View All Tours
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Testimonials ============ -->
+      <section
+        id="testimonials"
+        class="section testimonials-section"
+        aria-labelledby="testimonials-title"
+      >
+        <div class="container">
+          <header class="section-header text-center" data-reveal="fade-up">
+            <p class="section-badge">Testimonials</p>
+            <h2 class="section-title" id="testimonials-title">
+              What Our Customers <span class="highlight-title">Are Saying</span>
+            </h2>
+          </header>
+
+          <div class="swiper testimonial-swiper" data-reveal="fade-up">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="testimonial-item">
+                  <p class="quote">
+                    <i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+                    <span>
+                      From the first phone call to the flight home, everything was
+                      handled. Our two weeks in Peru felt effortless &mdash; every
+                      guide was early and every hotel was better than the last.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+                  </p>
+                  <div class="profile">
+                  <img
+                    src="assets/person-m-9.webp"
+                    class="testimonial-img"
+                    alt="Portrait of Saul Goodman"
+                    width="90"
+                    height="90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="testimonial-name">Saul Goodman</h3>
+                  <p class="testimonial-role">CEO &amp; Founder</p>
+                </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-item">
+                  <p class="quote">
+                    <i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+                    <span>
+                      Happy Tour planned a honeymoon we still talk about. The
+                      overwater villa, the private dinner on the sand &mdash;
+                      every detail felt personal.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+                  </p>
+                  <div class="profile">
+                  <img
+                    src="assets/person-f-5.webp"
+                    class="testimonial-img"
+                    alt="Portrait of Sara Wilsson"
+                    width="90"
+                    height="90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="testimonial-name">Sara Wilsson</h3>
+                  <p class="testimonial-role">Designer</p>
+                  </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-item">
+                  <p class="quote">
+                    <i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+                    <span>
+                      I travel constantly for work, so I am picky. This team found
+                      boutique hotels and routes I never would have discovered
+                      alone &mdash; and still stayed inside my budget.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+                  </p>
+                  <div class="profile">
+                  <img
+                    src="assets/person-f-12.webp"
+                    class="testimonial-img"
+                    alt="Portrait of Jena Karlis"
+                    width="90"
+                    height="90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="testimonial-name">Jena Karlis</h3>
+                  <p class="testimonial-role">Store Owner</p>
+                </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-item">
+                  <p class="quote">
+                    <i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+                    <span>
+                      The safari was a dream. Our guide knew every trail and every
+                      bird call, and the small group size made all the difference.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+                  </p>
+                  <div class="profile">
+                  <img
+                    src="assets/person-m-12.webp"
+                    class="testimonial-img"
+                    alt="Portrait of Matt Brandon"
+                    width="90"
+                    height="90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="testimonial-name">Matt Brandon</h3>
+                  <p class="testimonial-role">Freelancer</p>
+                </div>
+                </article>
+              </div>
+
+              <div class="swiper-slide">
+                <article class="testimonial-item">
+                  <p class="quote">
+                    <i class="bi bi-quote quote-icon-left" aria-hidden="true"></i>
+                    <span>
+                      Fourteen days in Patagonia without a single logistics
+                      headache. Genuinely the best-organized trip I have ever
+                      taken.
+                    </span>
+                    <i class="bi bi-quote quote-icon-right" aria-hidden="true"></i>
+                  </p>
+                  <div class="profile">
+                  <img
+                    src="assets/person-m-13.webp"
+                    class="testimonial-img"
+                    alt="Portrait of John Larson"
+                    width="90"
+                    height="90"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <h3 class="testimonial-name">John Larson</h3>
+                  <p class="testimonial-role">Entrepreneur</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Call To Action ============ -->
+      <section id="cta" class="section cta-section" aria-labelledby="cta-title">
+        <div class="container">
+          <div class="row align-items-center gy-5">
+            <div class="col-md-6 order-md-1 order-2" data-reveal="fade-right">
+              <p class="offer-badge">
+                <span class="limited-offer">Limited Time Offer</span>
+              </p>
+              <h2 class="cta-title" id="cta-title">Discover Your Next Adventure</h2>
+              <p class="cta-desc">
+                Unlock incredible destinations with our specially curated travel
+                packages. From exotic beaches to mountain peaks, your perfect
+                getaway awaits.
+              </p>
+              <div class="main-actions">
+                <a href="#tours" class="btn btn--brand">
+                  <i class="bi bi-compass" aria-hidden="true"></i>
+                  Explore Now
+                </a>
+                <a href="#booking" class="btn btn--outline-brand">
+                  <i class="bi bi-percent" aria-hidden="true"></i>
+                  View Deals
+                </a>
+              </div>
+              <div class="contact-info">
+                <span class="text-label">Need help choosing?</span>
+                <a href="tel:+15551234567" class="contact-link">
+                  <i class="bi bi-telephone" aria-hidden="true"></i>
+                  +1 (555) 123-4567
+                </a>
+              </div>
+            </div>
+
+            <div class="col-md-6 order-md-2 order-1" data-reveal="fade-left">
+              <div class="image-card">
+                <img
+                  src="assets/cta-postcard.webp"
+                  alt="A hand holding a postcard that frames a Venice canal with gondolas behind it"
+                  class="img-fluid"
+                  width="1200"
+                  height="800"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="stats-overlay">
+                  <div class="stats-group">
+                    <div class="stats-number">500+</div>
+                    <div class="stats-label">Destinations</div>
+                  </div>
+                  <div class="stats-group">
+                    <div class="stats-number">10K+</div>
+                    <div class="stats-label">Happy Travelers</div>
+                  </div>
+                  <div class="stats-group">
+                    <div class="stats-number">4.9</div>
+                    <div class="stats-label">Average Rating</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="loop-section" data-reveal="fade-up">
+            <div class="newsletter-content">
+              <div class="loop-icon" aria-hidden="true">
+                <i class="bi bi-envelope-heart"></i>
+              </div>
+              <div class="newsletter-text">
+                <h3 class="loop-text-title">Stay in the Loop</h3>
+                <p class="loop-text-desc">
+                  Get exclusive travel deals and destination guides delivered to
+                  your inbox
+                </p>
+              </div>
+            </div>
+
+            <form class="loop-form" action="#" method="post" data-form="newsletter">
+              <div class="form-wrapper">
+                <label class="visually-hidden" for="loop-email">
+                  Your email address
+                </label>
+                <input
+                  type="email"
+                  id="loop-email"
+                  name="email"
+                  placeholder="Your email address"
+                  autocomplete="email"
+                  required
+                />
+                <button type="submit" aria-label="Subscribe to newsletter">
+                  <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="loop-privacy">
+                <i class="bi bi-lock-fill" aria-hidden="true"></i>
+                <span>We protect your privacy. Unsubscribe anytime.</span>
+              </p>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <!-- Why choose our adventures -->
+          <div class="choose-section">
+            <h3 class="choose-title" data-reveal="fade-up">
+              Why Choose Our Adventures
+            </h3>
+            <p class="choose-subtitle" data-reveal="fade-up" data-reveal-delay="100">
+              Experience the difference with our premium travel services
+            </p>
+            <div class="choose-cards">
+              <article class="choose-card" data-reveal="fade-up" data-reveal-delay="200">
+                <div class="choose-icon" aria-hidden="true">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <h4 class="choose-card-title">Handpicked Destinations</h4>
+                <p class="choose-card-desc">
+                  Every location is carefully selected by our travel experts for
+                  authentic experiences
+                </p>
+              </article>
+              <article class="choose-card" data-reveal="fade-up" data-reveal-delay="300">
+                <div class="choose-icon" aria-hidden="true">
+                  <i class="bi bi-award"></i>
+                </div>
+                <h4 class="choose-card-title">Award-Winning Service</h4>
+                <p class="choose-card-desc">
+                  Recognized for excellence with 5-star ratings and industry
+                  awards
+                </p>
+              </article>
+              <article class="choose-card" data-reveal="fade-up" data-reveal-delay="400">
+                <div class="choose-icon" aria-hidden="true">
+                  <i class="bi bi-heart"></i>
+                </div>
+                <h4 class="choose-card-title">Personalized Care</h4>
+                <p class="choose-card-desc">
+                  Tailored itineraries designed around your preferences and
+                  travel style
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ Footer ============ -->
+    <footer id="contact" class="footer">
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-7" data-reveal="fade-up">
+              <h2 class="heading-footer">Join Our Newsletter</h2>
+              <p class="footer-newsletter-text">
+                Subscribe to our newsletter and receive the latest news about our
+                tours, destinations and special offers!
+              </p>
+              <form
+                class="footer-form"
+                action="#"
+                method="post"
+                data-form="newsletter"
+              >
+                <div class="newsletter-form">
+                  <label class="visually-hidden" for="footer-email">
+                    Enter your email
+                  </label>
+                  <input
+                    type="email"
+                    id="footer-email"
+                    name="email"
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                    required
+                  />
+                  <button type="submit">Subscribe</button>
+                </div>
+                <p class="form-status form-status--light" role="status" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="footer-about col-lg-4 col-md-6">
+            <a href="#hero" aria-label="Happy Tour — home">
+              <img
+                src="assets/logo.webp"
+                alt="Happy Tour"
+                class="sitelogo"
+                width="442"
+                height="317"
+              />
+            </a>
+            <address class="footer-contact">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p class="mt-3">
+                <strong>Phone:</strong>
+                <a href="tel:+15551234567">+1 (555) 123-4567</a>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:info@example.com">info@example.com</a>
+              </p>
+            </address>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-6 footer-links">
+            <h3 class="footer-heading">Useful Links</h3>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#hero">Home</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#about">About us</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#why-choose">Why choose us</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 col-6 footer-links">
+            <h3 class="footer-heading">Our Services</h3>
+            <ul>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#booking">Custom Itineraries</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#tours">Guided Tours</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#booking">Flights &amp; Hotels</a>
+              </li>
+              <li>
+                <i class="bi bi-chevron-right" aria-hidden="true"></i>
+                <a href="#booking">Travel Insurance</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-social">
+            <h3 class="footer-heading">Follow Us</h3>
+            <p class="footer-social-text">
+              Join our community of travellers for trip inspiration, behind-the-scenes
+              stories and flash deals.
+            </p>
+            <div class="social-icons">
+              <a href="#" aria-label="Happy Tour on Facebook" title="Facebook">
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#" aria-label="Happy Tour on X (Twitter)" title="X (Twitter)">
+                <i class="bi bi-twitter-x" aria-hidden="true"></i>
+              </a>
+              <a href="#" aria-label="Happy Tour on Instagram" title="Instagram">
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" aria-label="Happy Tour on LinkedIn" title="LinkedIn">
+                <i class="bi bi-linkedin" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>
+          &copy; <span id="year">2026</span> <strong>Happy Tour</strong> All
+          Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button
+      id="scroll-top"
+      class="scroll-top"
+      type="button"
+      aria-label="Scroll back to top"
+    >
+      <i class="bi bi-arrow-up-short" aria-hidden="true"></i>
+    </button>
+
+    <!-- Vendor JS (self-hosted) -->
+    <script src="assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/swiper-bundle.min.js"></script>
+    <!-- Site JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
