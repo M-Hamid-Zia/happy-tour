@@ -104,6 +104,11 @@ p {
   text-wrap: pretty;
 }
 
+img,
+svg {
+  vertical-align: middle;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -127,6 +132,56 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
+}
+
+/* Form + button baseline the page used to get from the framework */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+  opacity: 0.55;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* Screen-reader-only text */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Body scroll lock while a drawer is open (toggled by script.js) */
+body.is-locked {
+  overflow: hidden;
+  padding-right: var(--scrollbar-gap, 0px);
 }
 
 address {
@@ -164,7 +219,203 @@ address {
   color: #fff;
 }
 
-/* ---------- 3. Utilities ---------- */
+/* ---------- 3. Icons (inline SVG sprite) ---------- */
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  width: 1em;
+  height: 1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.125em;
+}
+
+/* Filled glyphs (rating stars) and brand marks are fill-based, not stroked */
+.icon--solid,
+.icon--brand {
+  fill: currentColor;
+  stroke: none;
+}
+
+/* ---------- 4. Layout: container & section grids ---------- */
+/* Breakpoints match the design: 576 / 768 / 992 / 1200 / 1400px */
+.container {
+  --container-max: 100%;
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 0.75rem;
+}
+
+@media (min-width: 576px) {
+  .container {
+    --container-max: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    --container-max: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    --container-max: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    --container-max: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    --container-max: 1320px;
+  }
+}
+
+.hero-grid,
+.about-grid,
+.info-grid,
+.destinations-grid,
+.tours-grid,
+.cta-grid,
+.footer-grid,
+.footer-newsletter-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.hero-grid {
+  align-items: center;
+  gap: 3rem;
+}
+
+.about-grid,
+.cta-grid {
+  align-items: center;
+  gap: 3rem 1.5rem;
+}
+
+.info-grid,
+.destinations-grid,
+.tours-grid,
+.footer-grid {
+  gap: 1.5rem;
+}
+
+.hero-grid > *,
+.about-grid > *,
+.info-grid > *,
+.destinations-grid > *,
+.tours-grid > *,
+.cta-grid > *,
+.footer-grid > *,
+.footer-newsletter-grid > * {
+  min-width: 0;
+}
+
+/* A cell exists only so its card stretches to the full row height */
+.grid-cell {
+  display: flex;
+  min-width: 0;
+}
+
+.grid-cell > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.section-footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* Footer columns: two up on phones, a 12-column grid from 768px */
+.footer-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.footer-about,
+.footer-social {
+  grid-column: 1 / -1;
+}
+
+.footer-newsletter-block {
+  text-align: center;
+}
+
+/* Below the two-column breakpoint the postcard leads, the copy follows */
+@media (max-width: 767.98px) {
+  .cta-media {
+    order: -1;
+  }
+}
+
+@media (min-width: 768px) {
+  .info-grid,
+  .tours-grid,
+  .cta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+
+  .footer-about {
+    grid-column: span 6;
+  }
+
+  .footer-links {
+    grid-column: span 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-grid {
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  }
+
+  .about-grid,
+  .destinations-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .info-grid,
+  .tours-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .footer-about,
+  .footer-social {
+    grid-column: span 4;
+  }
+
+  .footer-links {
+    grid-column: span 2;
+  }
+
+  .footer-newsletter-block {
+    width: 58.333%;
+    margin-inline: auto;
+  }
+}
+
+/* ---------- 5. Utilities ---------- */
 
 /* Buttons */
 .btn {
@@ -251,6 +502,7 @@ address {
 .section-header {
   max-width: 46rem;
   margin: 0 auto clamp(2.5rem, 2rem + 2vw, 3.75rem);
+  text-align: center;
 }
 
 .section-badge {
@@ -305,7 +557,7 @@ address {
   will-change: auto;
 }
 
-/* ---------- 4. Header & navigation ---------- */
+/* ---------- 6. Header & navigation ---------- */
 .header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -353,14 +605,25 @@ address {
   height: clamp(2.15rem, 1.75rem + 1.4vw, 2.75rem);
 }
 
-/* Desktop menu (hidden on mobile — the offcanvas menu takes over) */
+/* Desktop menu (hidden on mobile — the drawer takes over) */
 .navmenu {
+  display: none;
+}
+
+/* The header button only has room from 992px up — below that the drawer
+   carries its own Book Now button. Scoped to .header so it always wins
+   over the shared .btngetstarted look further down. */
+.header .btngetstarted {
   display: none;
 }
 
 @media (min-width: 992px) {
   .navmenu {
     display: block;
+  }
+
+  .header .btngetstarted {
+    display: inline-flex;
   }
 
   .navtoggle {
@@ -402,6 +665,7 @@ address {
 /* Header CTA */
 .btngetstarted {
   display: inline-flex;
+  align-items: center;
   align-items: center;
   justify-content: center;
   padding: 0.62rem 1.35rem;
@@ -458,15 +722,48 @@ address {
   background-color: #fff;
 }
 
-/* Mobile offcanvas menu */
-.mobile-menu {
-  --bs-offcanvas-width: min(20rem, 88vw);
+/* Mobile drawer + backdrop (hand-written, no framework JS) */
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  background-color: rgba(3, 16, 19, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.drawer-backdrop.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1045;
+  display: flex;
+  flex-direction: column;
+  width: min(20rem, 88vw);
+  max-width: 100%;
+  overflow-y: auto;
   background-color: var(--dark);
   color: #fff;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-lg);
+  transform: translateX(101%);
+  visibility: hidden;
+  transition: transform 0.35s var(--ease-out), visibility 0.35s ease;
 }
 
-.mobile-menu .offcanvas-header {
+.drawer.is-open {
+  transform: none;
+  visibility: visible;
+}
+
+.mobile-menu .drawer-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -497,7 +794,7 @@ address {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.mobile-menu .offcanvas-body {
+.mobile-menu .drawer-body {
   display: flex;
   flex-direction: column;
   padding: 1.5rem;
@@ -549,11 +846,11 @@ address {
   color: #4fc3dc;
 }
 
-.mobile-menu-contact i {
+.mobile-menu-contact .icon {
   color: var(--brand);
 }
 
-/* ---------- 5. Hero & booking form ---------- */
+/* ---------- 7. Hero & booking form ---------- */
 .hero-section {
   position: relative;
   display: flex;
@@ -630,7 +927,7 @@ address {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.hero-trust i {
+.hero-trust .icon {
   margin-right: 0.45rem;
   color: #ffc342;
 }
@@ -672,7 +969,7 @@ address {
   gap: 0.95rem;
 }
 
-.booking-form .form-control {
+.booking-form .field {
   display: block;
   width: 100%;
   padding: 0.72rem 0.95rem;
@@ -687,7 +984,7 @@ address {
 }
 
 /* Consistent, light select arrow on the dark form surface */
-.booking-form select.form-control {
+.booking-form select.field {
   appearance: none;
   -webkit-appearance: none;
   padding-right: 2.5rem;
@@ -697,11 +994,11 @@ address {
   background-size: 0.9rem 0.9rem;
 }
 
-.booking-form .form-control:hover {
+.booking-form .field:hover {
   border-color: rgba(255, 255, 255, 0.38);
 }
 
-.booking-form .form-control:focus {
+.booking-form .field:focus {
   outline: none;
   background-color: rgba(255, 255, 255, 0.13);
   border-color: var(--brand);
@@ -709,7 +1006,7 @@ address {
 }
 
 /* Native date pickers on a dark surface */
-.booking-form .form-control[type="date"] {
+.booking-form .field[type="date"] {
   color-scheme: dark;
   min-height: 2.85rem;
 }
@@ -758,7 +1055,7 @@ address {
   }
 }
 
-/* ---------- 6. About ---------- */
+/* ---------- 8. About ---------- */
 .about-text {
   margin-bottom: 1.25rem;
   font-size: var(--fs-lead);
@@ -836,13 +1133,9 @@ address {
   opacity: 0.92;
 }
 
-/* ---------- 7. Why choose us ---------- */
+/* ---------- 9. Why choose us ---------- */
 .why-section {
   background-color: #fff;
-}
-
-.cards {
-  row-gap: 1.5rem;
 }
 
 .info-card {
@@ -887,7 +1180,7 @@ address {
   line-height: 1.72;
 }
 
-/* ---------- 8. Featured destinations ---------- */
+/* ---------- 10. Featured destinations ---------- */
 .destinations-section {
   background: linear-gradient(180deg, var(--bg) 0%, #eaf3f6 100%);
 }
@@ -953,7 +1246,7 @@ address {
   color: rgba(255, 255, 255, 0.92);
 }
 
-.location i {
+.location .icon {
   color: #7fd4e6;
 }
 
@@ -975,11 +1268,11 @@ address {
   color: inherit;
 }
 
-.card-meta i {
+.card-meta .icon {
   margin-right: 0.32rem;
 }
 
-.card-meta .rating i {
+.card-meta .rating .icon {
   color: #ffc342;
 }
 
@@ -1084,7 +1377,7 @@ address {
   font-size: 0.865rem;
 }
 
-.location-small i {
+.location-small .icon {
   color: var(--brand);
   font-size: 0.85em;
 }
@@ -1106,7 +1399,7 @@ address {
   font-size: 0.82rem;
 }
 
-.dest-card-sm-meta i {
+.dest-card-sm-meta .icon {
   margin-right: 0.25rem;
   color: var(--brand);
 }
@@ -1133,15 +1426,15 @@ address {
   color: var(--brand-stronger);
 }
 
-.details-link i {
+.details-link .icon {
   transition: transform var(--transition);
 }
 
-.details-link:hover i {
+.details-link:hover .icon {
   transform: translateX(4px);
 }
 
-/* ---------- 9. Featured tours ---------- */
+/* ---------- 11. Featured tours ---------- */
 .tour-card {
   display: flex;
   flex-direction: column;
@@ -1237,7 +1530,7 @@ address {
   font-size: 0.875rem;
 }
 
-.tour-card-body .card-meta i {
+.tour-card-body .card-meta .icon {
   color: var(--brand);
 }
 
@@ -1296,27 +1589,119 @@ address {
   min-width: 12.5rem;
 }
 
-/* ---------- 10. Testimonials ---------- */
+/* ---------- 12. Testimonials ---------- */
 .testimonials-section {
   background-color: #fff;
 }
 
-.testimonial-swiper {
-  padding-bottom: 3.5rem;
+/* Vanilla carousel: the track stretches every slide to the tallest one, so
+   all testimonial cards share exactly the same height. */
+.carousel {
+  --carousel-gap: 28px;
+  --carousel-slide-width: 100%;
+  position: relative;
+}
+
+/* No-JS fallback: a natively scrollable, snap-aligned row of cards */
+.carousel-viewport {
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.carousel-viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.js .carousel-viewport {
   overflow: hidden;
+  cursor: grab;
+  /* horizontal drags belong to the carousel, vertical ones to the page */
+  touch-action: pan-y;
+  /* padding gives the hover lift room that overflow would otherwise clip */
+  padding-block: 1rem;
+  margin-block: -1rem;
 }
 
-.swiper-slide {
+.js .carousel-viewport.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.carousel-track {
   display: flex;
-  flex-direction: column;
-  height: 100%;
+  align-items: stretch;
+  gap: var(--carousel-gap);
+  will-change: transform;
 }
 
+.carousel-track.is-animating {
+  transition: transform 0.7s var(--ease-out);
+}
+
+.carousel-slide {
+  display: flex;
+  flex: 0 0 var(--carousel-slide-width);
+  height: auto;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+
+.carousel-slide > * {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .carousel {
+    --carousel-gap: 24px;
+    --carousel-slide-width: calc((100% - 24px) / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel {
+    --carousel-gap: 28px;
+    --carousel-slide-width: calc((100% - 56px) / 3);
+  }
+}
+
+.carousel-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 2.5rem;
+}
+
+.carousel-pagination:empty {
+  display: none;
+}
+
+.carousel-bullet {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #c4d4d9;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-bullet:hover {
+  background-color: #9db4bb;
+  transform: scale(1.2);
+}
+
+.carousel-bullet.is-active {
+  width: 12px;
+  height: 12px;
+  background-color: var(--brand-strong);
+}
 
 .testimonial-item {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   align-items: center;
   padding: 2rem 1.85rem 1.85rem;
   border: 1px solid var(--border);
@@ -1328,7 +1713,10 @@ address {
 }
 
 .testimonial-item .quote {
-  /* flex-grow: 1; */
+  /* Grows to absorb the leftover space, so short quotes still line up
+     with the tallest card and every profile sits on the same baseline. */
+  align-self: stretch;
+  flex: 1 1 auto;
   margin-bottom: 1.55rem;
   padding: 1.15rem 1.25rem;
   border-radius: var(--radius-md);
@@ -1386,23 +1774,7 @@ address {
 }
 
 
-
-/* Swiper pagination */
-.swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
-  background-color: #c4d4d9;
-  opacity: 1;
-  transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  width: 12px;
-  height: 12px;
-  background-color: var(--brand-strong);
-}
-
-/* ---------- 11. Call to action ---------- */
+/* ---------- 13. Call to action ---------- */
 .cta-section {
   background-color: #eef6f8;
 }
@@ -1618,7 +1990,7 @@ address {
   font-size: var(--fs-xs);
 }
 
-.loop-privacy i {
+.loop-privacy .icon {
   color: var(--brand);
 }
 
@@ -1683,7 +2055,7 @@ address {
   line-height: 1.7;
 }
 
-/* ---------- 12. Footer ---------- */
+/* ---------- 14. Footer ---------- */
 .footer {
   padding-top: 1.25rem;
   background-color: var(--dark);
@@ -1773,6 +2145,10 @@ address {
   margin-bottom: 0.35rem;
 }
 
+.footer-contact-line {
+  margin-top: 1rem;
+}
+
 .footer-heading {
   margin-bottom: 1.15rem;
   color: #fff;
@@ -1806,7 +2182,7 @@ address {
   margin-bottom: 0.55rem;
 }
 
-.footer-links li i {
+.footer-links li .icon {
   color: var(--brand);
   font-size: 0.72rem;
 }
@@ -1851,7 +2227,7 @@ address {
   color: rgba(255, 255, 255, 0.78);
 }
 
-/* ---------- 13. Back to top ---------- */
+/* ---------- 15. Back to top ---------- */
 .scroll-top {
   position: fixed;
   right: 1.15rem;
@@ -1885,7 +2261,7 @@ address {
   transform: translateY(-3px);
 }
 
-/* ---------- 14. Motion, hover & print ---------- */
+/* ---------- 16. Motion, hover & print ---------- */
 
 /* Stack destination mini-cards on very small phones */
 @media (max-width: 420px) {
@@ -1994,7 +2370,8 @@ address {
 /* Fine-tune select print output */
 @media print {
   .header,
-  .mobile-menu,
+  .drawer,
+  .drawer-backdrop,
   .scroll-top,
   .hero-media,
   .btn,
