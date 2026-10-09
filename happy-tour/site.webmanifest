@@ -1,0 +1,22 @@
+{
+  "name": "Happy Tour | Curated Tours & Unforgettable Travel Experiences",
+  "short_name": "Happy Tour",
+  "description": "Handpicked destinations, expert local guides and flexible tour packages across 85+ countries.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6fafb",
+  "theme_color": "#031013",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
